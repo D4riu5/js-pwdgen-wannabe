@@ -27,12 +27,25 @@ function userInput() {
     alert('Entry Required');
     return ;
     }  
-    
-    let pwd = firstName + lastName + favColor + '21'
-    document.getElementById("showPWD").value = pwd;
 
-    // show copy to clipboard button
-    document.getElementById('copyBtn').style.display = "inline-block";
+    document.getElementById('load').style.display = "block";
+    document.getElementById('overlay').style.display = "block";
+
+  setTimeout(() => {
+    const box = document.getElementById('load');
+    const box2 = document.getElementById('overlay');
+    box.style.display = 'none';
+    box2.style.display = 'none';
+  }, 2000); 
+  
+  
+  setTimeout(() => {
+  let pwd = firstName + lastName + favColor + '21'
+  document.getElementById("showPWD").value = pwd;
+}, 2000);
+
+  // show copy to clipboard button
+  document.getElementById('copyBtn').style.display = "inline-block";
 }
 
 function reset(){
