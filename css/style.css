@@ -1,9 +1,56 @@
 #box{
-    height: 300px;
+    min-height: 300px;
 }
+
+#showPWD{
+    padding: 0 0 5px 0;
+}
+
+/*********** copy to clipoard ***********/
+#copyBtn{
+    display: none;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.hidden-text {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: rgb(245, 34, 34);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hidden-text:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.wrapper:hover .hidden-text {
+    visibility: visible;
+    opacity: 1;
+}
+/*********** copy to clipoard ***********/
 
 @media screen and (max-width: 992px) {
     #box{
-        height: 400px;
+        min-height: 350px;
     }
 }

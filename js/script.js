@@ -29,4 +29,30 @@ function userInput() {
     }  
     let pwd = firstName + lastName + favColor + '21'
     document.getElementById("showPWD").value = pwd;
+
+    // show copy to clipboard button
+    document.getElementById('copyBtn').style.display = "inline-block";
+}
+
+
+
+// copy to clipboard
+
+function myCopy() {
+  var copyText = document.getElementById("showPWD");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied to clipboard";
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+function hide(){
+  document.getElementById('copyBtn').style.display = "";
 }
