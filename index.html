@@ -11,27 +11,28 @@
         <!-- CSS files -->
         <link rel="stylesheet" href="css/style.css">
     </head>
-<body class="bg-secondary">
-    <main>
-        <div class="container">
-            <div class="row mt-5 align-items-center">
-                <div id="box" class="col-6 offset-3 bg-dark text-light text-center rounded p-2">
-                    <h2> Worst Password generator 2022</h2>
-                    <form>
-                        <input readonly="true" type="text" name="" id="showPWD" placeholder="click the button to generate password..." class="mt-5 w-50">
-                        <button id="copyBtn" onclick="myCopy()" class="btn btn-sm btn-success wrapper"><i class="bi bi-clipboard"></i> <span class="hidden-text" id="myTooltip"> Copy to clipboard</span> </button>
-                        <div class="d-grid gap-2 col-6 mx-auto">
-                            <button onclick="userInput()" class="btn btn-primary mt-5" type="button-1">Generate password</button>
-                            <button type="reset" onclick="hide()" class="btn btn-danger">Reset</button>
+    <body class="bg-secondary">
+        <main>
+            <div class="container">
+                <div class="row mt-5 align-items-center">
+                    <div id="box" class="col-6 offset-3 bg-dark text-light text-center rounded p-2">
+                        <h2> Worst Password generator 2022</h2>
+                        <div>
+                            <input readonly="true" value type="text" name="" id="showPWD" placeholder="click the button to generate password..." class="mt-5 w-50">
+                            <button id="copyBtn" onclick="myCopy()" class="btn btn-sm btn-success wrapper"><i class="bi bi-clipboard"></i> <span class="hidden-text" id="myTooltip"> Copy to clipboard</span> </button>
+                            
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button onclick="userInput()" class="btn btn-primary mt-5" type="button-1">Generate password</button>
+                                <button onclick="reset()" class="btn btn-danger">Reset</button>
+                            </div>
                         </div>
-                    </form>
 
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </main>
-    
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+    </html>

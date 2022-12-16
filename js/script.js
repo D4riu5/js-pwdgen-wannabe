@@ -2,31 +2,32 @@
 function userInput() {
     const firstName = prompt("Enter your name");
     if (firstName == "") {
-        alert('Entry Required');
-        return false;
-      }
+      alert('Entry Required');
+      return ;
+    }
     if (firstName == null) {
     alert('Entry Required');
-    return false;
+    return ;
     }  
     const lastName = prompt("Enter your last name");
     if (lastName == "") {
-        alert('Entry Required');
-        return false;
-      }
+      alert('Entry Required');
+      return ;
+    }
     if (lastName == null) {
     alert('Entry Required');
-    return false;
+    return ;
     }    
     const favColor = prompt("Enter your favorite color");
     if (favColor == "") {
-        alert('Entry Required');
-        return false;
-      }
+      alert('Entry Required');
+      return ;
+    }
     if (favColor == null) {
     alert('Entry Required');
-    return false;
+    return ;
     }  
+    
     let pwd = firstName + lastName + favColor + '21'
     document.getElementById("showPWD").value = pwd;
 
@@ -34,7 +35,10 @@ function userInput() {
     document.getElementById('copyBtn').style.display = "inline-block";
 }
 
-
+function reset(){
+    document.getElementById("showPWD").value = "";
+    document.getElementById('copyBtn').style.display = "none";
+}
 
 // copy to clipboard
 
@@ -53,6 +57,6 @@ function outFunc() {
   tooltip.innerHTML = "Copy to clipboard";
 }
 
-function hide(){
+function hide() {
   document.getElementById('copyBtn').style.display = "";
 }
