@@ -52,17 +52,14 @@ function myCopy() {
   tooltip.innerHTML = "Copied to clipboard";
 }
 
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
+
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copy to clipboard";
+
 
 function hide() {
   document.getElementById('copyBtn').style.display = "";
 }
-
-
-
 
 
 // custom bg 
