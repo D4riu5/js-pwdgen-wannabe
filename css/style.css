@@ -54,3 +54,22 @@
         min-height: 350px;
     }
 }
+
+
+
+/* custom bg */
+body {
+    margin: 0;
+    background-color: #000;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #canv {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
