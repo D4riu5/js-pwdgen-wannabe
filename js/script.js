@@ -1,4 +1,3 @@
-
 function userInput() {
     const firstName = prompt("Enter your name");
     if (firstName == "") {
@@ -31,6 +30,7 @@ function userInput() {
     document.getElementById('load').style.display = "block";
     document.getElementById('overlay').style.display = "block";
 
+  // loader timeout
   setTimeout(() => {
     const box = document.getElementById('load');
     const box2 = document.getElementById('overlay');
@@ -38,7 +38,7 @@ function userInput() {
     box2.style.display = 'none';
   }, 2000); 
   
-  
+  // input value timeout
   setTimeout(() => {
   let pwd = firstName + lastName + favColor + '21'
   document.getElementById("showPWD").value = pwd;
@@ -54,7 +54,6 @@ function reset(){
 }
 
 // copy to clipboard
-
 function myCopy() {
   var copyText = document.getElementById("showPWD");
   copyText.select();
@@ -65,15 +64,12 @@ function myCopy() {
   tooltip.innerHTML = "Copied to clipboard";
 }
 
-
 var tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "Copy to clipboard";
-
 
 function hide() {
   document.getElementById('copyBtn').style.display = "";
 }
-
 
 // custom bg 
 const canvas = document.getElementById('canv');
