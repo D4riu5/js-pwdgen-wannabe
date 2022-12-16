@@ -11,9 +11,25 @@
         <!-- CSS files -->
         <link rel="stylesheet" href="css/style.css">
     </head>
-<body>
+<body class="bg-secondary">
+    <main>
+        <div class="container">
+            <div class="row mt-5 align-items-center">
+                <div id="box" class="col-6 offset-3 bg-dark text-light text-center rounded p-2">
+                    <h2> Welcome to password generator</h2>
+                    <form >
+                        <input readonly="true" type="text" name="" id="showPWD" placeholder="click the button to generate password..." class="mt-5 w-50">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button onclick="userInput()" class="btn btn-primary mt-5" type="button-1">Generate password</button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                          </div>
+                    </form>
 
+                </div>
+            </div>
 
+        </div>
+    </main>
 
 
     <script type="text/javascript" src="js/script.js"></script>
